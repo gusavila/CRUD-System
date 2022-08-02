@@ -68,7 +68,7 @@ function App() {
           <input 
           type="date" 
           name="registerDate" 
-          placeholder="Data de Cadastro" 
+          placeholder="02/12/2022" 
           className="register--input"
           onChange={handleChangeValues}
           />
