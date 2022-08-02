@@ -1,4 +1,5 @@
 .app--container {
+  width: 400px;
 }
 
 .register--container {
@@ -42,6 +43,10 @@ p.question {
 
 .radio--input input {
   margin: 0px 10px;
+}
+
+.radio--input {
+  margin: 0px auto;
 }
 
 .register--button {

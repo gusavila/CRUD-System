@@ -6,6 +6,9 @@ import "./components/cards/card.css";
 function App() {
   const [values, setValues] = useState();
   const [listPessoa, setListPessoa] = useState();
+  const reloadPage = () => {
+    window.location.reload();
+  };
   console.log(listPessoa)
   const handleChangeValues = (value) => {
     setValues(prevValue=>({
@@ -24,6 +27,7 @@ function App() {
     }).then((response)=>{
       console.log(response);
     });
+    reloadPage();
   };
 
   useEffect(()=>{

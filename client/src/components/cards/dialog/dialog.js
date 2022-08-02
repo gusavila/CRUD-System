@@ -8,6 +8,11 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Axios from "axios";
 
 export default function FormDialog(props) {
+
+  const reloadPage = () => {
+    window.location.reload();
+  };
+
   const [editValues, setEditValues] = useState({
     id: props.id,
     name: props.name,
@@ -15,10 +20,6 @@ export default function FormDialog(props) {
     birth: props.birth,
     registerDate: props.registerDate,
   });
-
-  const handleClickOpen = () => {
-    props.setOpen(true);
-  };
 
   const handleClose = () => {
     props.setOpen(false);
@@ -38,15 +39,12 @@ export default function FormDialog(props) {
       cpf: editValues.cpf,
       birth: editValues.birth,
       registerDate: editValues.registerDate
-    })
+    });
     handleClose();
+    reloadPage();
   };
 
   const handleDeletePessoa = () => {
-    Axios.delete(`http://localhost:3001/delete/${editValues.id}`); 
-  };
-
-  const handleDeleteGame = () => {
     Axios.delete(`http://localhost:3001/delete/${editValues.id}`).then(() => {
       props.setListCard(
         props.listCard.filter((value) => {
@@ -55,6 +53,7 @@ export default function FormDialog(props) {
       );
     });
     handleClose();
+    reloadPage();
   };
 
   return (
@@ -108,10 +107,10 @@ export default function FormDialog(props) {
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button color="primary" onClick={() => handleDeleteGame()}>
+          <Button id="refresh" color="primary" onClick={() => handleDeletePessoa()}>
             Excluir
           </Button>
-          <Button color="primary" onClick={() => handleEditPessoa()}>
+          <Button id="refresh" color="primary" onClick={() => handleEditPessoa()}>
             Salvar
           </Button>
         </DialogActions>
