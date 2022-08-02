@@ -28,7 +28,7 @@ export default function Card(props) {
         <div class="left--align">
             <p className="card--cpf">CPF: {props.cpf}</p>
             <p className="card--birth">Data de Nascimento: {props.birth}</p>
-            <p className="card--register">Data de Cadastro:{props.registerDate}</p>
+            <p className="card--register">Data de Cadastro: {props.registerDate}</p>
             <p className="card--ativo">Usuário Ativo? {props.ativo}</p>
         </div>
     </div>
