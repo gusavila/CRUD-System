@@ -42,6 +42,13 @@ function App() {
       <header>
         <h1><a href="#">Sistema CRUD</a></h1>
       </header>
+      
+      <div className="nome--alunos">
+        <h2>Alunos</h2>
+        <p>Gustavo Ávila</p>
+        <p>Gilberto Navarro</p>
+      </div>
+
       <div className="register--container">
         <h1 className="register--title">Cadastro</h1>
 

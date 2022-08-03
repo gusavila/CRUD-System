@@ -18,7 +18,17 @@
 
 .card--container h1 {
     text-align: center;
-    color: hsl(246, 60%, 67%);;
+    color: hsl(246, 60%, 67%);
+}
+
+.card--id {
+    background-color: white;
+    float: right;
+    width: 34px;
+    padding: 4px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
 }
 
 .left--align {
