@@ -3,6 +3,7 @@ import "./App.css";
 import Axios from "axios";
 import Card from "./components/cards/card";
 import "./components/cards/card.css";
+
 function App() {
   const [values, setValues] = useState();
   const [listPessoa, setListPessoa] = useState();
@@ -17,7 +18,7 @@ function App() {
     }))
   };
 
-  const handleClickButton = () =>{
+  const handleRegisterPessoa = () =>{
     Axios.post("http://localhost:3001/register",{
       name: values.name,
       cpf: values.cpf,
@@ -38,6 +39,9 @@ function App() {
 
   return (
     <div className="app--container container">
+      <header>
+        <h1><a href="#">Sistema CRUD</a></h1>
+      </header>
       <div className="register--container">
         <h1 className="register--title">Cadastro</h1>
 
@@ -68,7 +72,7 @@ function App() {
           <input 
           type="date" 
           name="registerDate" 
-          placeholder="02/12/2022" 
+          placeholder="Data de Cadastro" 
           className="register--input"
           onChange={handleChangeValues}
           />
@@ -95,8 +99,9 @@ function App() {
           </div>
 
           <button className="register--button" 
-          onClick={() => handleClickButton()}>Cadastrar</button>
+          onClick={() => handleRegisterPessoa()}>Cadastrar</button>
       </div>
+
       {typeof listPessoa !== "undefined" && listPessoa.map((value) => {
         return (
         <Card

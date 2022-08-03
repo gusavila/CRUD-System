@@ -1,5 +1,7 @@
 body {
   background-color: rgb(252, 252, 252);
+  width: 400px;
+  margin: 0 auto;
 }
 ::-webkit-scrollbar {
   width: 1em;
@@ -7,8 +9,8 @@ body {
 
 ::-webkit-scrollbar-track {
   background: rgb(202, 195, 253);
-  margin-block: .5em;
-  border-radius: 100vw;
+  
+  
 }
 
 ::-webkit-scrollbar-thumb{
@@ -21,8 +23,23 @@ body {
   background: hsl(246, 61%, 61%);
 }
 
-.app--container {
-  width: 400px;
+header {
+  position: fixed;
+  left: 0;
+  background-color: rgb(129, 115, 255);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+header h1{
+  margin: 0.3em 6em;
+  margin-right: 60%;
 }
 
 .register--container {
@@ -31,7 +48,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   border-radius: 1em;
-  margin-top: 5rem;
+  margin-top: 6rem;
   text-align: center;
 }
 
@@ -43,6 +60,7 @@ body {
 }
 
 .register--input {
+  color: rgba(0, 0, 0, 0.6);
   display: block;
   padding: 13px;
   margin: 10px auto;
@@ -89,6 +107,7 @@ p.question {
   background-color: hsl(246, 61%, 61%);
   color: white;
   transition: 0.3s all;
+  cursor: pointer;
 }
 
 .register--button:active {
@@ -101,7 +120,10 @@ p.question {
 input[type="date"] {
   text-transform: uppercase;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+}
+
+input[type="radio"] {
+  cursor: pointer;
 }
 
 ::-webkit-calendar-picker-indicator{

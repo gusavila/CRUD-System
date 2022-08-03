@@ -65,6 +65,15 @@ export default function FormDialog(props) {
         <DialogTitle id="form-dialog-title">Editar</DialogTitle>
         <DialogContent>
           <TextField
+            disabled
+            margin="dense"
+            id="id"
+            label="IDPessoa"
+            defaultValue={props.id}
+            type="text"
+            fullWidth
+          />
+          <TextField
             autoFocus
             margin="dense"
             id="name"

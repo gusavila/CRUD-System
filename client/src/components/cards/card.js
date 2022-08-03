@@ -26,6 +26,7 @@ export default function Card(props) {
     <div className="card--container container" onClick={() => handleClickCard()}>
         <h1 className="card--title">{props.name}</h1>
         <div class="left--align">
+            <p className="card--id"> ID: {props.id}</p>
             <p className="card--cpf">CPF: {props.cpf}</p>
             <p className="card--birth">Data de Nascimento: {props.birth}</p>
             <p className="card--register">Data de Cadastro: {props.registerDate}</p>
