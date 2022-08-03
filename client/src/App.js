@@ -118,8 +118,8 @@ function App() {
          id={value.IDPessoa}
          name= {value.Nome}
          cpf=  {value.CPF}
-         birth= {value.DataNascimento}
-         registerDate= {value.DataCadastro}
+         birth= {new Date(value.DataNascimento).toLocaleDateString()}
+         registerDate= {new Date(value.DataCadastro).toLocaleDateString()}
          ativo= {value.Ativo}
          ></Card>
          );

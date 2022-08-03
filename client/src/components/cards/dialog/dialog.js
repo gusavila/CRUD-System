@@ -6,6 +6,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Axios from "axios";
+import "./dialog.css";
 
 export default function FormDialog(props) {
 
@@ -94,20 +95,22 @@ export default function FormDialog(props) {
             fullWidth
           />
           <TextField
+            
             autoFocus
             margin="dense"
             id="birth"
             defaultValue={props.birth}
-            type="date"
+            type="text"
             onChange={handleChangeValues}
             fullWidth
           />
           <TextField
+            
             autoFocus
             margin="dense"
             id="registerDate"
-            defaultValue={props.registerDate}
-            type="date"
+            defaultValue={new Date(props.registerDate).toLocaleDateString()}
+            type="text"
             onChange={handleChangeValues}
             fullWidth
           />
@@ -119,7 +122,7 @@ export default function FormDialog(props) {
           <Button id="refresh" color="primary" onClick={() => handleDeletePessoa()}>
             Excluir
           </Button>
-          <Button id="refresh" color="primary" onClick={() => handleEditPessoa()}>
+          <Button id="refresh" className="save--button" color="primary" onClick={() => handleEditPessoa()}>
             Salvar
           </Button>
         </DialogActions>
