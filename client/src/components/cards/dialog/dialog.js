@@ -100,7 +100,7 @@ export default function FormDialog(props) {
             margin="dense"
             id="birth"
             defaultValue={props.birth}
-            type="text"
+            type="date"
             onChange={handleChangeValues}
             fullWidth
           />
@@ -110,7 +110,7 @@ export default function FormDialog(props) {
             margin="dense"
             id="registerDate"
             defaultValue={new Date(props.registerDate).toLocaleDateString()}
-            type="text"
+            type="date"
             onChange={handleChangeValues}
             fullWidth
           />

@@ -90,6 +90,7 @@ header h1{
   color: rgba(0, 0, 0, 0.6);
   display: block;
   padding: 13px;
+  height: 1em;
   margin: 10px auto;
   width: 300px;
   border-radius: 10rem;
