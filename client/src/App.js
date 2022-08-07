@@ -71,7 +71,7 @@ function App() {
           <input 
           type="date" 
           name="birthDate" 
-          placeholder="Data de Nascimento" 
+          placeholder="Data de nascimento" 
           className="register--input"
           onChange={handleChangeValues}
           />
@@ -79,7 +79,7 @@ function App() {
           <input 
           type="date" 
           name="registerDate" 
-          placeholder="Data de Cadastro" 
+          placeholder="Data de cadastro" 
           className="register--input"
           onChange={handleChangeValues}
           />
@@ -107,6 +107,10 @@ function App() {
 
           <button className="register--button" 
           onClick={() => handleRegisterPessoa()}>Cadastrar</button>
+          
+          <footer>
+            <p>Copyright &copy; 2022 <a href="https://www.instagram.com/gus__avila/" target="_blank" rel="noreferrer">Gustavo Ávila</a> and <a href="https://www.instagram.com/gil.navarro1/" target="_blank" rel="noreferrer">Gilberto Navarro</a></p>
+          </footer>
       </div>
 
       {typeof listPessoa !== "undefined" && listPessoa.map((value) => {

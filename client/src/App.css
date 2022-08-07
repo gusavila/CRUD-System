@@ -3,14 +3,17 @@ body {
   width: 400px;
   margin: 0 auto;
 }
+
+.app--container {
+  margin-bottom: 4em;
+}
+
 ::-webkit-scrollbar {
   width: 1em;
 }
 
 ::-webkit-scrollbar-track {
   background: rgb(202, 195, 253);
-  
-  
 }
 
 ::-webkit-scrollbar-thumb{
@@ -158,10 +161,47 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+footer {
+  position: fixed;
+  background-color: rgb(129, 115, 255);
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+footer a {
+  font-weight: 500;
+}
+
 ::-webkit-calendar-picker-indicator{
   background-color: hsl(246, 80%, 67%);
   padding: 5px;
   cursor: pointer;
   border-radius: 13px;
+}
+
+input[type="date"] {
+  color: transparent;
+  content: attr(placeholder);
+  text-transform: none;
+}
+
+input[type="date"]:focus {
+  color: inherit;
+  content: attr(placeholder);
+}
+
+input[type="date"]:before {
+  content: attr(placeholder);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+input[type="date"]:after {
+  content: none;
+}
+
+input[type="date"]:focus:before {
+  content: none;
 }
 
